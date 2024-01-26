@@ -1,18 +1,22 @@
 var nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
+    service:'gmail',
+    host: 'smtp.gmail.com',
     port: 587,
+    secure: false,
     auth: {
-        user: 'annabelle.weissnat45@ethereal.email',
-        pass: 'c8hM4GXYPCee8FcDJt'
+        user: 'hackerby8481@gmail.com',
+        pass: 'qwiy bfp fjjh sfw'
     }
 });
 
 var mailOptions= {
     from:'Kishan Solanki <hackerby8481@gmail.com>',
-    to: 'ryan53@ethereal.email',
+    to: 'hackerby8481@gmail.com , bhaiyakaleen18@gmail.com , kishanbar121212@gmail.com , kishansolnki26@gmail.com',
     subject : 'This is testing email...',
-    html : "<h1>Hello This is Kishan Solanki</h1>"
+    html : `<h1>Hello I am Kishan Solanki From This side. 
+            'Kem Cho Badha!' I hope All are Fine. 
+            This Mail is sent from Gautam Makwana Through Nodemailer....</h1>`
 };
 
 transporter.sendMail(mailOptions,(error,info)=>{
